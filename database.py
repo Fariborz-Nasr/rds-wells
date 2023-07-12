@@ -1,10 +1,11 @@
+import os
 import sys
 import sqlalchemy
 
-conn_string = "postgresql://tdi:qKmd8s5ze7WAYV@adventureworks.tditrain.com:5431/wells"
+DB_URL = os.getenv('DB_URL')
 
 def query_db(mindepth, mingradient):
-    engine = sqlalchemy.create_engine(conn_string)
+    engine = sqlalchemy.create_engine(DB_URL)
     conn = engine.connect()
     query = sqlalchemy.text(""" 
         SELECT latitude, longitude, depth, gradient
