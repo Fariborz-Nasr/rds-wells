@@ -16,8 +16,8 @@ def plot_wells(coords):
         fill='lightgray',
         stroke='white'
     ).properties(
-        width=500,
-        height=300
+        width=700,
+        height=500
     ).project('albersUsa')
 
     # airport positions on background
@@ -29,7 +29,7 @@ def plot_wells(coords):
         color=alt.Color('gradient:Q', scale=alt.Scale(scheme='inferno')),
         tooltip=[
             alt.Tooltip('depth', title='Depth (m)'),
-            alt.Tooltip('gradient', title='Gradient (*C/m)', format='0.3f')
+            alt.Tooltip('gradient', title='Gradient (°C/m)', format='0.3f')
         ]
     )
 
