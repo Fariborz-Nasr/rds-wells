@@ -28,8 +28,8 @@ def plot_wells(coords):
         latitude='latitude:Q',
         color=alt.Color('gradient:Q', scale=alt.Scale(scheme='inferno')),
         tooltip=[
-            alt.Tooltip('depth', title='Depth (m)'),
-            alt.Tooltip('gradient', title='Gradient (°C/m)', format='0.3f')
+            alt.Tooltip('depth:Q', title='Depth (m)'),
+            alt.Tooltip('gradient:Q', title='Gradient (°C/m)', format='0.3f')
         ]
     )
 
